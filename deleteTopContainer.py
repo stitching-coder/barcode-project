@@ -8,4 +8,5 @@ f = open('top_containers_to_date.txt', 'r')
 # DELETE each top_container listed in the txt file
 for uri in f:
   print(uri)
-  requests.delete(baseURL + uri, headers=headers)
+  response = requests.delete(baseURL + uri, headers=headers)
+  print(response)
